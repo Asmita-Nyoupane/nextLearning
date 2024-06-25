@@ -29,7 +29,10 @@ const notifications = [
 
 type CardProps = React.ComponentProps<typeof Card>;
 
-export default function NotificationPage({ className, ...props }: CardProps) {
+export default function ArchivedNotificationPage({
+  className,
+  ...props
+}: CardProps) {
   return (
     <Card className={cn("w-[380px]", className)} {...props}>
       <CardHeader>
@@ -71,10 +74,10 @@ export default function NotificationPage({ className, ...props }: CardProps) {
       <CardFooter>
         <Button className="w-full">
           <Link
-            href={"/dashboard/archived"}
+            href={"/dashboard"}
             className="text-lg text-white font-semibold text-muted-foreground"
           >
-            Archived
+            Default
           </Link>
         </Button>
       </CardFooter>
