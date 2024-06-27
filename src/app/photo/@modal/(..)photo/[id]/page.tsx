@@ -6,7 +6,6 @@ import { Button } from "@/components/ui/button";
 import Modal from "@/components/intercerpt/modal";
 const SinglePhotoPage = ({ params }: { params: { id: string } }) => {
   const photoId = params.id;
-  console.log("🚀 ~ SinglePhotoPage ~  photoId:", photoId);
 
   const photo: Photo | undefined = photos.find((p) => p.id === photoId);
   return (

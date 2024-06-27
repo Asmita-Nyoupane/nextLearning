@@ -4,15 +4,19 @@ import { Photo } from "@/lib/photo";
 export default function PhotoCard({ photo }: { photo: Photo }) {
   return (
     <>
-      <Image
-        alt={photo.name}
-        src={photo.imageSrc}
-        height={400}
-        width={400}
-        className=" aspect-square  object-cover"
-      />
+      <div className="flex justify-center items-center">
+        <Image
+          alt={photo.name}
+          src={photo.imageSrc}
+          priority={true}
+          quality={80}
+          height={300}
+          width={300}
+          className=" aspect-square  w-full "
+        />
+      </div>
 
-      <div className=" bg-white  -mt-4 px-4">
+      <div className=" bg-white  px-4">
         <h3 className="font-serif text-xl font-medium">{photo.name}</h3>
         <p className="text-sm text-gray-500">Taken by {photo.username}</p>
       </div>
